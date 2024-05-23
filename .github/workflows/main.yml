@@ -1,19 +1,20 @@
 name: Publish Website to CPanel
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  deploy:
+    name: 🚀 Deploy website every commit
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
-      with:
-        fetch-depth: 2
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ftp://118.139.161.199
-        username: gukan@rrc-academyofaudit.com
-        password: ${{ secrets.FTP_PASSWORD}}
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: 📂 Sync files
+        uses: ./
+        with:
+          server: ftp.rrc-academyofaudit.com
+          username: gukan@rrc-academyofaudit.com
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
