@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 📂 Sync files
-        uses: ./
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ftp.rrc-academyofaudit.com
           username: gukan@rrc-academyofaudit.com
