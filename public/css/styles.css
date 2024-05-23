@@ -1,0 +1,78 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* All Tables Data  */
+th,td{
+ 
+    border:3px solid brown;
+}
+td:first-child{
+    width:15%;
+}
+td:hover{
+    background-color: brown;
+    color:burlywood;
+    font-size: 30px;}
+   
+th{
+    font-size: 20px;
+}
+table{
+    text-align: center;
+    margin:0 auto;
+    border:5px solid brown;
+    background-color: bisque;
+}
+a{
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color:black;
+    display: inline-block;
+    font-size: 25px;
+}
+h1{
+    text-align: center;
+}
+/* header section in all pages */
+header{
+    width:100%;
+    background-color: brown;
+}
+header img{
+   display:block;
+   margin:0 auto;
+   width:50%;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    column-gap: 5%;
+    
+}
+.container div{
+    background-color: burlywood;
+    flex-basis: 20%;
+    text-align: center;
+    height:auto;
+    border-radius: 20px;
+    padding:2%;
+}
+
+@media (max-width:400px){
+    .container{
+        flex-direction:column;
+       
+        
+    }
+    .container div{
+width:50%;
+margin:20px auto;
+    }
+   a{
+    font-size: 16px;
+   }
+}
