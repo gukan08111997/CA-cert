@@ -253,14 +253,14 @@ nav {
 
 @keyframes bouncing-text {
   0% {
-    -moz-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -moz-transform: translateX(-45%);
+    -webkit-transform: translateX(-45%);
+    transform: translateX(-45%);
   }
   100% {
-    -moz-transform: translateX(50%);
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%);
+    -moz-transform: translateX(45%);
+    -webkit-transform: translateX(45%);
+    transform: translateX(45%);
   }
 }
 
@@ -286,7 +286,6 @@ nav {
   height: auto;
   padding: 3%;
   flex-flow: row wrap;
-  margin: 0 4%;
   font-size: 1.3rem;
   gap: 1%;
 }
@@ -433,6 +432,28 @@ h3 a:link {
   font-size: 2vw;
 }
 
+/* upcoming events section  */
+#upcoming_events_section{
+  padding:50px 100px;
+  width:100%;
+}
+#upcoming_events_section>div{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content:space-between;
+  align-items: center;
+
+}
+#upcoming_events_section h1{
+  margin-bottom: 50px;
+  font-weight: 800;
+}
+#upcoming_events_section img{
+  width:70%;
+  margin: 50px auto;
+}
+
+
 /* Testimonial section Slick  */
 .testimonial-section {
   background-image: linear-gradient(to right bottom, #01bbef80, #2b349980), url(../images/testimonial-bg.webp);
@@ -497,7 +518,7 @@ h3 a:link {
   gap: 4rem;
 } */
 .team-section{
-  width: 100vw;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
