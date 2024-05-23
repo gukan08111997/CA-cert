@@ -14,7 +14,7 @@ jobs:
           with:
             username: gukan@rrc-academyofaudit.com
             password: ${{ secrets.FTP_PASSWORD }}
-            server: ftp.rrc-academyofaudit.com
+            server: rrc-academyofaudit.com
             port: 21
             remote_path: '/home/vc5pu4bz5qhq/public_html'
          
