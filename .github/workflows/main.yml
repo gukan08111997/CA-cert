@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      main
+jobs:
+    deploy_job:
+      runs-on: ubuntu-latest
+      name: deploy
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+        - name: Deploy file
+          uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+          with:
+            username: gukan@rrc-academyofaudit.com
+            password: ${{ secrets.FTP_PASSWORD }}
+            server: sftp.rrc-academyofaudit.com
+            port: 21
+            remote_path: '/home/vc5pu4bz5qhq/public_html'
+            sftp_only: true
